@@ -11,4 +11,4 @@ If no paramter is passed, it will look in the current directory.
 
 Example usage:
 
-python mediaFinder.py C:\Music
+{code python mediaFinder.py C:\Music}
