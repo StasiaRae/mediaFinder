@@ -10,5 +10,7 @@ A parameter can be passed to specify which path to look in.
 If no paramter is passed, it will look in the current directory.
 
 Example usage:
+```
 
 python mediaFinder.py C:\Music
+```
