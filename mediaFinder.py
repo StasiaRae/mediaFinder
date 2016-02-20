@@ -9,5 +9,5 @@ for root, dirs, files in os.walk(path): #loops through all files and subdirector
         file = os.path.join(root, name)
         for ext in fileExt:
             fileType = file[file.rfind("."): len(file)] #extracts the file extension from the file path
-            if (fileType == ext): #checks if file matches a desired type
+            if (fileType.lower() == ext.lower()): #checks if file matches a desired type
                 print file
