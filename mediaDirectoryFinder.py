@@ -11,11 +11,14 @@ def checkDirectory(file): #method to check whether a given file has the desired 
             if fileType.lower() == ext.lower():
                 return True
 dirSet = set("") #a set containing desired directories
+i = 0
 for root, dirs, files in os.walk(path): #loops through subdirectories
     for name in files: #loops through files
         file = os.path.join(root, name)
         if checkDirectory(file): #if a file matches the desired type, it is added to the set
             dirSet.add(root)
+    i = i+1
+    print "Checked " + '{:>10}'.format(str(i)) + " directories \r",
 dirList = list(dirSet) #set is converted to a list and sorted
 dirList.sort()
 for dir in dirList:
