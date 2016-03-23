@@ -19,7 +19,10 @@ for root, dirs, files in os.walk(path): #loops through subdirectories
             dirSet.add(root)
     i = i+1
     print "Checked " + '{:>10}'.format(str(i)) + " directories \r",
+print ""
+print "Generating file..."
 dirList = list(dirSet) #set is converted to a list and sorted
 dirList.sort()
+out_file = open("media_directories.txt", "wb")
 for dir in dirList:
     print dir
